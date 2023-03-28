@@ -28,6 +28,7 @@ main {
   height: 512px;
   background-color: white;
   border-radius: 32px;
+  box-sizing: border-box;
   box-shadow: 0 16px 24px hsla(241, 81%, 54%, 0.1);
 }
 
@@ -149,4 +150,25 @@ button {
 }
 button:hover {
   background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 100%);
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100vw;
+    border-radius: 0;
+    padding-bottom: 32px;
+    min-width: 375px;
+  }
+  .result {
+    width: 100%;
+    padding-bottom: 32px;
+    border-radius: 0 0 32px 32px;
+  }
+  .summary {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
