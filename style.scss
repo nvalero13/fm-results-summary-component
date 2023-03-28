@@ -47,23 +47,26 @@ main {
   height: 512px;
   background-color: white;
   border-radius: 32px;
-  box-shadow: 0 16px 16px rgba(0, 0, 72, 0.1);
+  box-shadow: 0 16px 24px hsl(241, 81%, 54%, 0.1);
 }
 
 h1 {
   font-size: 68px;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 32px;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 24px;
+  font-weight: bold;
 }
 
 .result {
-  padding: 16px 64px;
+  padding: 16px 60px;
   box-sizing: border-box;
   height: 100%;
   width: 50%;
@@ -77,7 +80,6 @@ h3 {
   h3 {
     color: hsla(0, 0%, 100%, 0.8);
     text-align: center;
-    font-weight: 500;
   }
 
   .circle {
@@ -119,5 +121,75 @@ h3 {
 .summary {
   width: 50%;
   box-sizing: border-box;
-  padding: 16px 64px;
+  padding: 16px 42px;
+
+  h3 {
+    color: $dark-gray-blue;
+  }
+
+  article {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sum-result {
+      color: $dark-gray-blue;
+      font-weight: bold;
+    }
+
+    .sum-total {
+      color: hsl(224, 30%, 27%, 0.5);
+      font-size: 16px;
+    }
+  }
+
+  .reaction {
+    color: $light-red;
+    background-color: hsl(0, 100%, 67%, 0.1);
+  }
+
+  .memory {
+    color: $orange-yellow;
+    background-color: hsl(39, 100%, 56%, 0.1);
+  }
+
+  .verbal {
+    color: $green-teal;
+    background-color: hsl(166, 100%, 37%, 0.1);
+  }
+
+  .visual {
+    color: $cobalt-blue;
+    background-color: hsl(234, 85%, 45%, 0.1);
+  }
+}
+
+button {
+  margin-top: 28px;
+  font-family: "Hanken Grotesk";
+  font-size: 18px;
+  width: 100%;
+  padding: 16px;
+  color: white;
+  background-color: $dark-gray-blue;
+  border: none;
+  border-radius: 32px;
+
+  &:hover {
+    background: linear-gradient(
+      0deg,
+      $light-royal-blue 0%,
+      $light-slate-blue 100%
+    );
+  }
 }
